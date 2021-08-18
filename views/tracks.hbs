@@ -1,0 +1,14 @@
+<ul> 
+    {{#each albums}}
+        <li>
+            <h6>{{this.name}}</h6>
+            {{#if this.preview_url}}
+                <audio controls>
+                    <source src="{{this.preview_url}}" type='audio/mpeg'/>
+                </audio>
+            {{else}}
+                <p>Sorry, I canny find a preview</p>
+            {{/if}}
+        </li>
+    {{/each}}
+</ul>
